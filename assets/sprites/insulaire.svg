@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="192" viewBox="0 0 480 192">
+  <defs>
+    <style>
+      .ink{stroke:#4a3a28;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .skin{fill:#f6d8c2}.hair{fill:#563e3e}.hair-hi{fill:#72504a}
+      .robe{fill:#8ec6bd}.robe-hi{fill:#b8ddd0}.shorts{fill:#e8b75b}
+      .boot{fill:#9a6743}.cheek{fill:#e99b8c}.eye{fill:#3f342d}
+    </style>
+  </defs>
+  <!-- Insulaire original, sprite sheet 3 x 160 px : repos, salut, marche. -->
+  <g transform="translate(0 0)">
+    <ellipse cx="80" cy="178" rx="31" ry="7" fill="#574a35" opacity=".15"/>
+    <path class="boot ink" d="M59 154h18v19H58q-8 0-7-7 1-7 8-12zm25 0h18l9 17q3 7-5 8H83z"/>
+    <path class="shorts ink" d="M61 134h39v23q-9 7-20 0-9 6-19 0z"/>
+    <path class="robe ink" d="M55 100q25-13 50 0l9 39q-27 13-66 0z"/>
+    <path class="robe-hi" d="M69 103q11-5 23 0l-7 34-14 1z"/>
+    <path class="ink" fill="none" d="M70 99q10 12 20 0M80 111v20m-15 4q15 5 30 0"/>
+    <path class="skin ink" d="M57 108q-13 8-16 25-1 7 5 8 5 1 8-5l10-17m38-11q13 7 17 19 3 8-3 11-6 2-9-5l-9-14"/>
+    <path class="skin ink" d="M52 53q1-26 28-31 34-5 40 25l-4 32q-7 25-34 27-24-2-30-25z"/>
+    <path class="hair ink" d="M48 61q-12-22 2-38l-2-15 18 9Q82-2 98 9l18-6-5 18q17 13 11 39l-10-8-5 17-10-16-13 14-8-15-13 13-4-17z"/>
+    <path class="hair-hi" d="M62 27q13-13 25-10m12-1 12-5" fill="none" stroke="#a87961" stroke-width="3" stroke-linecap="round"/>
+    <ellipse class="eye" cx="70" cy="67" rx="3.4" ry="5"/><ellipse class="eye" cx="98" cy="67" rx="3.4" ry="5"/>
+    <path class="cheek" d="M58 78q8-6 15 0-6 6-14 3zm36 0q8-6 15 0-6 6-14 3z"/>
+    <path class="ink" fill="none" d="M77 83q5 5 10 0" stroke-width="2.5"/>
+  </g>
+  <g transform="translate(160 0)">
+    <ellipse cx="80" cy="178" rx="31" ry="7" fill="#574a35" opacity=".15"/>
+    <path class="boot ink" d="M60 154h18v19H59q-8 0-7-7 1-7 8-12zm25 0h18l9 17q3 7-5 8H84z"/>
+    <path class="shorts ink" d="M61 134h39v23q-9 7-20 0-9 6-19 0z"/>
+    <path class="robe ink" d="M55 100q25-13 50 0l9 39q-27 13-66 0z"/>
+    <path class="robe-hi" d="M69 103q11-5 23 0l-7 34-14 1z"/>
+    <path class="ink" fill="none" d="M70 99q10 12 20 0M80 111v20m-15 4q15 5 30 0"/>
+    <path class="skin ink" d="M57 108q-13 8-16 25-1 7 5 8 5 1 8-5l10-17"/>
+    <path class="skin ink" d="M102 108q14-13 19-32 2-8 8-6 7 2 3 11-5 22-21 39"/>
+    <path class="skin ink" d="M52 53q1-26 28-31 34-5 40 25l-4 32q-7 25-34 27-24-2-30-25z"/>
+    <path class="hair ink" d="M48 61q-12-22 2-38l-2-15 18 9Q82-2 98 9l18-6-5 18q17 13 11 39l-10-8-5 17-10-16-13 14-8-15-13 13-4-17z"/>
+    <path class="hair-hi" d="M62 27q13-13 25-10m12-1 12-5" fill="none" stroke="#a87961" stroke-width="3" stroke-linecap="round"/>
+    <ellipse class="eye" cx="70" cy="67" rx="3.4" ry="5"/><ellipse class="eye" cx="98" cy="67" rx="3.4" ry="5"/>
+    <path class="cheek" d="M58 78q8-6 15 0-6 6-14 3zm36 0q8-6 15 0-6 6-14 3z"/>
+    <path class="ink" fill="none" d="M77 83q5 5 10 0" stroke-width="2.5"/>
+  </g>
+  <g transform="translate(320 0)">
+    <ellipse cx="80" cy="178" rx="31" ry="7" fill="#574a35" opacity=".15"/>
+    <path class="boot ink" d="M58 154h18v19H56q-8 0-6-7 2-7 8-12zm28 0h17l12 15q4 6-4 10H84z"/>
+    <path class="shorts ink" d="M61 134h39l2 23q-10 7-21 0-10 6-20 0z"/>
+    <path class="robe ink" d="M55 100q25-13 50 0l9 39q-27 13-66 0z"/>
+    <path class="robe-hi" d="M69 103q11-5 23 0l-7 34-14 1z"/>
+    <path class="ink" fill="none" d="M70 99q10 12 20 0M80 111v20m-15 4q15 5 30 0"/>
+    <path class="skin ink" d="M57 108q-13 8-16 25-1 7 5 8 5 1 8-5l10-17m38-11q13 7 17 19 3 8-3 11-6 2-9-5l-9-14"/>
+    <path class="skin ink" d="M52 53q1-26 28-31 34-5 40 25l-4 32q-7 25-34 27-24-2-30-25z"/>
+    <path class="hair ink" d="M48 61q-12-22 2-38l-2-15 18 9Q82-2 98 9l18-6-5 18q17 13 11 39l-10-8-5 17-10-16-13 14-8-15-13 13-4-17z"/>
+    <path class="hair-hi" d="M62 27q13-13 25-10m12-1 12-5" fill="none" stroke="#a87961" stroke-width="3" stroke-linecap="round"/>
+    <ellipse class="eye" cx="70" cy="67" rx="3.4" ry="5"/><ellipse class="eye" cx="98" cy="67" rx="3.4" ry="5"/>
+    <path class="cheek" d="M58 78q8-6 15 0-6 6-14 3zm36 0q8-6 15 0-6 6-14 3z"/>
+    <path class="ink" fill="none" d="M77 83q5 5 10 0" stroke-width="2.5"/>
+  </g>
+</svg>

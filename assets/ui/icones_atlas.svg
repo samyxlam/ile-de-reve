@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="48" viewBox="0 0 480 48">
+  <defs>
+    <style>
+      .i{fill:none;stroke:#4a3a28;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+      .f{stroke:#4a3a28;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <!-- Cellules 48 px : énergie, pièce, feuille, lune, plateau, île, recherche, cadeau, trophée, réglages. -->
+  <g transform="translate(0)">
+    <path class="f" fill="#f3c34f" d="M28 4 12 25h10l-2 19 17-24H26z"/>
+    <path class="i" d="m28 4-2 16"/>
+  </g>
+  <g transform="translate(48)">
+    <ellipse class="f" fill="#efc45b" cx="24" cy="24" rx="17" ry="18"/>
+    <ellipse class="i" cx="24" cy="24" rx="11" ry="13"/>
+    <path class="i" d="M22 15v18m5-14q-2-3-6-1-5 3 1 6 7 2 4 7-2 4-7 1"/>
+  </g>
+  <g transform="translate(96)">
+    <path class="f" fill="#9fc777" d="M39 8C17 8 9 18 11 29c2 10 13 13 21 5C38 27 39 17 39 8Z"/>
+    <path class="i" d="M12 39q9-15 23-25M20 29l-1-8m8 1 7-1"/>
+  </g>
+  <g transform="translate(144)">
+    <path class="f" fill="#f2c978" d="M31 5c-2 13 4 24 14 28-7 9-20 12-30 5C3 29 8 12 21 7c3-1 7-2 10-2Z"/>
+    <circle cx="14" cy="13" r="1.4" fill="#4a3a28"/><circle cx="8" cy="22" r="1.2" fill="#4a3a28"/>
+  </g>
+  <g transform="translate(192)">
+    <rect class="f" fill="#ead7b0" x="7" y="8" width="34" height="32" rx="5"/>
+    <path class="i" d="M18 8v10m12-10v10M7 20h34M19 27h4m-4 7h4m5-7h5m-5 7h5"/>
+  </g>
+  <g transform="translate(240)">
+    <path class="f" fill="#91bb86" d="M6 31q4-4 5-11 2-9 11-12 8-4 17 2 7 5 6 15-1 9-10 14H15Z"/>
+    <path class="i" d="M17 34q8-13 19-20M23 25l-1-8m7 3 6-1"/>
+    <path class="i" d="M4 36h39"/>
+  </g>
+  <g transform="translate(288)">
+    <circle class="i" cx="21" cy="20" r="12"/><path class="i" d="m30 29 10 10M17 20h8m-4-4v8"/>
+  </g>
+  <g transform="translate(336)">
+    <path class="f" fill="#e9a18b" d="M8 18h32v23H8z"/>
+    <path class="i" d="M6 13h36v7H6zM24 13v28M24 13c-11 0-14-9-7-9 5 0 7 5 7 9Zm0 0c11 0 14-9 7-9-5 0-7 5-7 9Z"/>
+  </g>
+  <g transform="translate(384)">
+    <path class="f" fill="#f1c357" d="M15 6h18v7c0 10-3 16-9 16s-9-6-9-16z"/>
+    <path class="i" d="M15 11H7v4c0 7 4 10 11 10m15-14h8v4c0 7-4 10-11 10M24 29v9m-9 3h18m-15-5h12"/>
+    <path class="i" d="m24 10 1.7 3.2 3.6.5-2.6 2.5.6 3.6-3.3-1.7-3.2 1.7.6-3.6-2.7-2.5 3.7-.5z"/>
+  </g>
+  <g transform="translate(432)">
+    <circle class="f" fill="#e8d1a8" cx="24" cy="24" r="7"/>
+    <path class="f" fill="#e8d1a8" d="m21 5 6 0 1 5q3 1 5 3l5-2 3 5-4 4q1 3 0 6l4 4-3 5-5-2q-2 2-5 3l-1 5h-6l-1-5q-3-1-5-3l-5 2-3-5 4-4q-1-3 0-6l-4-4 3-5 5 2q2-2 5-3z"/>
+    <circle class="i" cx="24" cy="24" r="4"/>
+  </g>
+</svg>

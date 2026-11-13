@@ -1,0 +1,64 @@
+name: Build Android APK
+
+# Compile l'APK du jeu sur les serveurs GitHub (gratuit, aucune installation locale).
+# Déclenché manuellement ou à chaque push sur main.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Godot 4.7.2 + templates d'export
+        run: |
+          GODOT_VER=4.7.2-stable
+          wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VER}/Godot_v${GODOT_VER}_linux.x86_64.zip"
+          unzip -q "Godot_v${GODOT_VER}_linux.x86_64.zip"
+          mv Godot_v${GODOT_VER}_linux.x86_64 /usr/local/bin/godot
+          wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VER}/Godot_v${GODOT_VER}_export_templates.tpz"
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VER#-stable}/
+          unzip -q "Godot_v${GODOT_VER}_export_templates.tpz"
+          cp -r templates/* ~/.local/share/godot/export_templates/4.7.2.stable/
+          chmod +x /usr/local/bin/godot
+
+      - name: Installer les paquets Android
+        run: |
+          yes | sdkmanager --licenses > /dev/null || true
+          yes | sdkmanager --install "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
+
+      - name: Générer le keystore de debug
+        run: |
+          keytool -genkeypair -v \
+            -keystore "$HOME/debug.keystore" -alias androiddebugkey \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=Android Debug,O=Android,C=US"
+          mkdir -p ~/.config/godot
+          cat > ~/.config/godot/editor_settings-4.7.tres <<SETTINGS
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          export/android/android_sdk_path = "/usr/local/lib/android/sdk"
+          export/android/java_sdk_path = "${JAVA_HOME}"
+          export/android/debug_keystore = "${HOME}/debug.keystore"
+          export/android/debug_keystore_user = "androiddebugkey"
+          export/android/debug_keystore_pass = "android"
+          SETTINGS
+
+      - name: Importer le projet
+        run: godot --headless --import || true
+
+      - name: Exporter l'APK (build Gradle)
+        run: godot --headless --export-release "Android" build/android/ile_de_reve.apk
+
+      - name: Publier l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ile-de-reve-apk
+          path: build/android/ile_de_reve.apk

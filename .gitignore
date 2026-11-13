@@ -1,0 +1,22 @@
+.godot/
+build/
+godot/
+.workbuddy-ai/
+*.tmp
+*.log
+
+# Fichiers temporaires de transfert GitHub
+ile-de-reve-source.zip
+ile-de-reve-source.zip.part*
+
+# Sauvegardes locales
+backup_*/
+
+# Sources lourdes hors jeu (régénération locale uniquement)
+fonts/source/
+outils/lot_*/
+
+# Planches QA (inutiles au build)
+outils/planche_*.png
+outils/cine_coins/
+outils/verif_*.png
