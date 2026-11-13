@@ -70,6 +70,9 @@ jobs:
       - name: Exporter l'APK (build Gradle)
         run: |
           mkdir -p build/android
+          # Gradle du template exige JDK 17 (le runner fournit une version trop récente)
+          export JAVA_HOME="$JAVA_HOME_17_X64"
+          echo "$JAVA_HOME/bin" >> $GITHUB_PATH
           # Installe le template de build Gradle dans le projet puis exporte.
           # --export-debug : signe avec le keystore debug, APK installable directement.
           godot --headless --install-android-build-template --export-debug "Android" build/android/ile_de_reve.apk
