@@ -54,7 +54,11 @@ jobs:
           SETTINGS
 
       - name: Importer le projet
-        run: godot --headless --import || true
+        run: |
+          # Premier scan : construit le cache .godot (erreurs de classes attendues)
+          godot --headless --import || true
+          # Deuxième scan : parse propre une fois le cache en place
+          godot --headless --import
 
       - name: Exporter l'APK (build Gradle)
         run: godot --headless --export-release "Android" build/android/ile_de_reve.apk
