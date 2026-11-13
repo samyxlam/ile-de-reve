@@ -22,8 +22,8 @@ jobs:
           unzip -q "Godot_v${GODOT_VER}_linux.x86_64.zip"
           mv Godot_v${GODOT_VER}_linux.x86_64 /usr/local/bin/godot
           wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VER}/Godot_v${GODOT_VER}_export_templates.tpz"
-          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VER#-stable}/
           unzip -q "Godot_v${GODOT_VER}_export_templates.tpz"
+          mkdir -p ~/.local/share/godot/export_templates/4.7.2.stable
           cp -r templates/* ~/.local/share/godot/export_templates/4.7.2.stable/
           chmod +x /usr/local/bin/godot
 
