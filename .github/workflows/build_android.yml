@@ -61,7 +61,9 @@ jobs:
           godot --headless --import
 
       - name: Exporter l'APK (build Gradle)
-        run: godot --headless --export-release "Android" build/android/ile_de_reve.apk
+        run: |
+          # Installe le template de build Gradle dans le projet puis exporte
+          godot --headless --install-android-build-template --export-release "Android" build/android/ile_de_reve.apk
 
       - name: Publier l'APK
         uses: actions/upload-artifact@v4
