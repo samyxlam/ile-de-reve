@@ -18,7 +18,7 @@ const TEXT_CLAIR := Color("#fff8ea")
 
 static var _theme: Theme = null
 static var _font: Font = null
-static const ICONES_ATLAS := {
+const ICONES_ATLAS := {
 	"⚡": 0, "🪙": 1, "🍃": 2, "🌙": 3, "🧩": 4,
 	"🏝": 5, "🏝️": 5, "🔍": 6, "🎁": 7, "🏆": 8, "⚙": 9, "⚙️": 9,
 }
