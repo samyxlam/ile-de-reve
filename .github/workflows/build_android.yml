@@ -62,6 +62,7 @@ jobs:
 
       - name: Exporter l'APK (build Gradle)
         run: |
+          mkdir -p build/android
           # Installe le template de build Gradle dans le projet puis exporte
           godot --headless --install-android-build-template --export-release "Android" build/android/ile_de_reve.apk
 
