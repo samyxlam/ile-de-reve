@@ -29,8 +29,10 @@ jobs:
 
       - name: Installer les paquets Android
         run: |
-          yes | sdkmanager --licenses > /dev/null || true
-          yes | sdkmanager --install "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
+          export ANDROID_HOME=/usr/local/lib/android/sdk
+          SDKM=$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager
+          yes | $SDKM --licenses > /dev/null || true
+          yes | $SDKM --install "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
 
       - name: Générer le keystore de debug
         run: |
