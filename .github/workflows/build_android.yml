@@ -34,9 +34,16 @@ jobs:
           yes | $SDKM --licenses > /dev/null || true
           yes | $SDKM --install "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
 
-      - name: Générer le keystore de debug
+      - name: Restaurer le keystore persistant
+        uses: actions/cache@v4
+        with:
+          path: ~/debug.keystore
+          key: keystore-iledereve-v1
+
+      - name: Générer le keystore de debug si absent
         run: |
-          keytool -genkeypair -v \
+          # Signature stable entre les builds : mise en cache ci-dessus.
+          [ -f "$HOME/debug.keystore" ] || keytool -genkeypair -v \
             -keystore "$HOME/debug.keystore" -alias androiddebugkey \
             -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass android -keypass android \
@@ -63,8 +70,9 @@ jobs:
       - name: Exporter l'APK (build Gradle)
         run: |
           mkdir -p build/android
-          # Installe le template de build Gradle dans le projet puis exporte
-          godot --headless --install-android-build-template --export-release "Android" build/android/ile_de_reve.apk
+          # Installe le template de build Gradle dans le projet puis exporte.
+          # --export-debug : signe avec le keystore debug, APK installable directement.
+          godot --headless --install-android-build-template --export-debug "Android" build/android/ile_de_reve.apk
 
       - name: Publier l'APK
         uses: actions/upload-artifact@v4
